@@ -1,5 +1,76 @@
 * {
     text-align: center;
     vertical-align: center;
-    border: 1px solid red;
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 1920px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+body {
+    background-color: rgba(15, 29, 231, 0.26);
+}
+
+thead {
+    border: none;
+}
+
+td {
+    border-top: 2px solid  rgba(15, 91, 231, 0.514);
+}
+
+th.combinators.header, th.pseudo.header {
+    font-size: 1.5em;
+    height: 38px;
+    border-bottom: 2px solid  rgba(15, 91, 231, 0.514);
+    padding-top: 12.5px;
+    padding-bottom: 12.5px;
+
+}
+
+th.selector, th.name, th.description {
+    font-size: 1.15em;
+    height: 25px;
+    background-color: rgba(15, 91, 231, 0.514);
+    margin-top: 3px;
+    padding-bottom: 3px;
+}
+
+table {
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 2px solid  rgba(15, 91, 231, 0.514);
+}
+
+td.tbody {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+td.tbody.selector {
+    width: 150px;
+    text-align: center;
+}
+
+td.tbody.name {
+    width: 180px;
+    text-align: center;
+}
+
+td.tbody.description {
+    width: 800px;
+}
+
+span {
+    background-color: rgba(216, 225, 241, 0.89);
+}
+
+#combinators {
+    margin-bottom: 35px;
 }

@@ -11,115 +11,116 @@
     <header>
         <h1>CSS Selector References</h1>
     </header>
-    <section id="table one">
+    <section>
         <h2>Basic Selectors</h2>
         <table>
             <thead>
                 <tr>
-                    <th>Selector</th>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <th class="thead selector">Selector</th>
+                    <th class="thead name">Name</th>
+                    <th class="thead description">Description</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>*</td>
-                    <td>Universal Selector</td>
-                    <td>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.</td>
+                    <td class="tbody selector"><span>*</span></td>
+                    <td class="tbody name">Universal</td>
+                    <td class="tbody description">Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.</td>
                 </tr>
                 <tr>
-                    <td>elementname</td>
-                    <td>Type Selector</td>
-                    <td>Selects all elements that have the given node name. Example: input will match any &lt;input&gt; element.</td>
+                    <td class="tbody selector"><span>elementname</span></td>
+                    <td class="tbody name">Type</td>
+                    <td class="tbody description">Selects all elements that have the given node name. <span>Example:</span> input will match any &lt;input&gt; element.</td>
                 </tr>
                 <tr>
-                    <td>.classname</td>
-                    <td>Class Selector</td>
-                    <td>Selects all elements that have the given class attribute. Example: .index will match any element that has a class of "index".</td>
+                    <td class="tbody selector"><span>.classname</span></td>
+                    <td class="tbody name">Class</td>
+                    <td class="tbody description">Selects all elements that have the given class attribute. <span>Example:</span> .index will match any element that has a class of "index".</td>
                 </tr>
                 <tr>
-                    <td>#idname</td>
-                    <td>ID Selector</td>
-                    <td></td>
+                    <td class="tbody selector"><span>#idname</span></td>
+                    <td class="tbody name">ID</td>
+                    <td class="tbody description">Selects an element based on the value of its id attribute. There should be only one element with a given ID in a
+                    document. <span>Example:</span> #toc will match the element that has the ID "toc".</td>
                 </tr>
                 <tr rowspan="3">
-                    <td>[attr], [attr=value], [attr~=value], [attr|=value], [attr^=value], [attr$=value], [attr*=value]</td>
-                    <td>Attribute Selector</td>
-                    <td>Selects all elements that have the given attribute. Example: [autoplay] will match all elements that have the autoplay attribute set (to any value).</td>
+                    <td class="tbody selector"><span>[attr]</span></td>
+                    <td class="tbody name">Attribute</td>
+                    <td class="tbody description" >Selects all elements that have the given attribute. <span>Example:</span> [autoplay] will match all elements that have the autoplay attribute set (to any value). <span>Other attribute selectors include:</span> [attr=value], [attr~=value], [attr|=value] [attr^=value], [attr$=value], [attr*=value]</td>
                 </tr>
-                <tr></tr>
-                <tr></tr>
             </tbody>
         </table>    
     </section>
     <section>
         <h2>Grouping Selectors</h2>
-        <table id="table two">
+        <table id="combinators">
             <thead>
                 <tr>
-                    <th id="combinators header" colspan="3">Combinators</th>
-                    <th></th>
-                    <th></th>
+                    <th class="combinators header" colspan="3">Combinators</th>
+                </tr>
+            </thead>
+                <tr>
+                    <th class="thead selector">Selector</th>
+                    <th class="thead name">Name</th>
+                    <th class="thead description">Description</th>
+                </tr>
+            <tbody>
+                <tr>
+                    <td class="tbody selector"><span>A, B</span></td>
+                    <td class="tbody name">Descendant</td>
+                    <td class="tbody description">The (space) combinator selects nodes that are descendants of the first element. <span>Example:</span> div span will match all &lt;span&gt; elements that are inside a &lt;div&gt; element.</td>
                 </tr>
                 <tr>
-                    <th>Selector</th>
-                    <th>Name</th>
-                    <th>Description</th>
+                    <td class="tbody selector"><span>></span></td>
+                    <td class="tbody name">Child</td>
+                    <td class="tbody description">The > combinator selects nodes that are direct children of the first element. <span>Example:</span> ul > li will match
+                    all &lt;li&gt; elements that are nested directly inside a &lt;ul&gt; element.</td>
+                </tr>
+                <tr>
+                    <td class="tbody selector"><span>~</span></td>
+                    <td class="tbody name">Generarl Sibling</td>
+                    <td class="tbody description">The ~ combinator selects siblings. This means that the second element follows the first (though not necessarily
+                    immediately), and both share the same parent. <span>Example:</span> p ~ span will match all &lt;span&gt; elements that follow
+                        a &lt;p&gt;, immediately or not.</td>
+                </tr>
+                <tr>
+                    <td class="tbody selector"><span>+</span></td>
+                    <td class="tbody name">Adjacent Sibling</td>
+                    <td class="tbody description">The + combinator matches the second element only if it immediately follows the first element. <span>Example:</span> h2
+                    + p will match all &lt;p&gt; elements that immediately follows
+                    &lt;h2&gt; element.</td>
+                </tr>
+                <tr class="last">
+                    <td class="tbody selector"><span>||</span></td>
+                    <td class="tbody name">Column</td>
+                    <td class="tbody description">The || combinator selects nodes which belong to a column. <span>Example:</span> col || td will match all &lt;td&gt; elements
+                        that belong to the scope of the
+                        &lt;col&gt;.</td>
+                </tr>
+            </tbody>
+        </table>
+        <table id="pseudo">
+            <thead>
+                <tr>
+                    <th class="pseudo header" colspan="3">Pseudo</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>A B</td>
-                    <td>Descendant Combinator</td>
-                    <td>The (space) combinator selects nodes that are descendants of the first element. Example: div span will match all &lt;span&gt; elements that are inside a &lt;div&gt; element.</td>
+                    <th class="thead selector" id="thead selector">Selector</th>
+                    <th class="thead name">Name</th>
+                    <th class="thead description">Description</th>
                 </tr>
                 <tr>
-                    <td>></td>
-                    <td>Child Combinator</td>
-                    <td>The > combinator selects nodes that are direct children of the first element. Example: ul > li will match
-                    all &lt;li&gt; elements that are nested directly inside a &lt;ul&gt; element.</td>
+                    <td class="tbody selector"><span>:</span></td>
+                    <td class="tbody name">Classes</td>
+                    <td class="tbody description">The : pseudo allow the selection of elements based on state information that is not contained in the document tree.
+                    <span>Example:</span> a:visited will match all &lt;a&gt; elements that have been visited by the user.</td>
                 </tr>
-                <tr>
-                    <td>~</td>
-                    <td>Generarl Sibling Combinator</td>
-                    <td>The ~ combinator selects siblings. This means that the second element follows the first (though not necessarily
-                    immediately), and both share the same parent. Example: p ~ span will match all &lt;span&gt; elements that follow
-                        a &lt;p&gt;, immediately or not.</td>
-                </tr>
-                <tr>
-                    <td>+</td>
-                    <td>Adjacent Sibling Combinator</td>
-                    <td>The + combinator matches the second element only if it immediately follows the first element. Example: h2
-                    + p will match all &lt;p&gt; elements that immediately follows
-                    &lt;h2&gt; element.</td>
-                </tr>
-                <tr>
-                    <td>||</td>
-                    <td>Column Combinator</td>
-                    <td>The || combinator selects nodes which belong to a column. Example: col || td will match all &lt;td&gt; elements
-                        that belong to the scope of the
-                        &lt;col&gt;.</td>
-                </tr>
-                <tr>
-                    <th id="pseudo header" colspan="3">Pseudo</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>Selector</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
-                    <td>:</td>
-                    <td>Pseudo Classes</td>
-                    <td>The : pseudo allow the selection of elements based on state information that is not contained in the document tree.
-                    Example: a:visited will match all &lt;a&gt; elements that have been visited by the user.</td>
-                </tr>
-                <tr>
-                    <td>::</td>
-                    <td>Pseudo Elements</td>
-                    <td>The :: pseudo represent entities that are not included in HTML. Example: p::first-line will match the first line of all
+                <tr id="last">
+                    <td class="tbody selector"><span>::</span></td>
+                    <td class="tbody name">Elements</td>
+                    <td class="tbody description" id="last pseudo">The :: pseudo represent entities that are not included in HTML. <span>Example:</span> p::first-line will match the first line of all
                     &lt;p&gt; elements.</td>
                 </tr>
             </tbody>
